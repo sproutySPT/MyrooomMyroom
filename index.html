@@ -1153,7 +1153,7 @@ textarea {
 (function() {
     const TODO_KEY = 'todoItems';
     let todoFilter = 'all';
-    let todoOpen = true;
+    let todoOpen = false;
 
     function loadTodos() {
         try {
@@ -1737,7 +1737,7 @@ function renderGallery() {
 }
 
 /* ── 간식 접고펴기 ── */
-let snackOpen = true;
+let snackOpen = false;
 document.getElementById('snackToggleHeader').addEventListener('click', () => {
     snackOpen = !snackOpen;
     const body = document.getElementById('snackBody');
