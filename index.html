@@ -1152,6 +1152,8 @@ textarea {
 <script>
 (function() {
     const TODO_KEY = 'todoItems';
+    document.getElementById('todoBody').style.display = 'none';
+document.getElementById('todoToggleIcon').style.transform = 'rotate(180deg)';
     let todoFilter = 'all';
     let todoOpen = false;
 
@@ -1738,6 +1740,8 @@ function renderGallery() {
 
 /* ── 간식 접고펴기 ── */
 let snackOpen = false;
+    document.getElementById('snackBody').style.display = 'none';
+document.getElementById('snackToggleIcon').style.transform = 'rotate(180deg)';
 document.getElementById('snackToggleHeader').addEventListener('click', () => {
     snackOpen = !snackOpen;
     const body = document.getElementById('snackBody');
