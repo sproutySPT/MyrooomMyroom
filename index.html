@@ -1259,10 +1259,10 @@ textarea {
     <div class="section">
         <div class="camera-section-header">
             <h2>📷 방 사진</h2>
-            <button id="takePicBtn" type="button" class="cam-btn primary">📸 촬영</button>
+            <button id="takePicBtn" type="button" class="cam-btn primary">📸 고르기</button>
         </div>
         <div id="photoGrid">
-            <div class="photo-empty">아직 사진이 없어요.<br>📸 촬영으로 오늘 방을 기록해봐요!</div>
+            <div class="photo-empty">아직 사진이 없어요.<br>📸 고르기로 오늘 방을 기록해봐요!</div>
         </div>
     </div>
 
@@ -1928,7 +1928,7 @@ const allAchievements=[
     {cat:'🌟 특별',n:"👑 내방의 신",d:"XP 600 이상",xp:350,max:1,p:()=>getXP()>=600?1:0},
     {cat:'🌟 특별',n:"🌌 레전드",d:"XP 1500 이상",xp:500,max:1,p:()=>getXP()>=1500?1:0},
     {cat:'🌟 특별',n:"💫 신화",d:"XP 3000 이상",xp:800,max:1,p:()=>getXP()>=3000?1:0},
-    {cat:'🌟 특별',n:"🤫 비밀 업적",d:"좋음+가득+간식20+메모",xp:180,max:1,p:()=>(getCurrentCondition()==='좋음'&&getCurrentBasket()==='가득'&&getSnackCount()>=20&&String(memoBox.value||'').trim().length>0)?1:0},
+    {cat:'🌟 특별',n:"쉿 비밀 업적",d:"블라블라블라...후후",xp:180,max:1,p:()=>(getCurrentCondition()==='좋음'&&getCurrentBasket()==='가득'&&getSnackCount()>=20&&String(memoBox.value||'').trim().length>0)?1:0},
     {cat:'🌟 특별',n:"🗓 1년 개근",d:"기록 365일 달성",xp:1000,max:365,p:()=>loadLogs().length},
     {cat:'🌟 특별',n:"?? 올라운더",d:"모든 카테고리 1개 이상 달성",xp:300,max:1,p:()=>{const cats=['🍪 간식','📮 엽서','📝 메모','🔥 접속','🏠 컨디션','🛒 간식상태','📅 기록','📷 사진'];const unlocked=new Set(loadUnlockedAchievementNames());return cats.every(c=>allAchievements.filter(a=>a.cat===c).some(a=>unlocked.has(a.n)))?1:0;}},
 ];
