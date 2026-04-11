@@ -1655,7 +1655,7 @@ function renderPhotoGrid() {
     const today=getLocalDateKey();
     const photos=loadPhotos().filter(p=>p.date===today).reverse();
     photoGrid.innerHTML='';
-    if(photos.length===0){photoGrid.innerHTML='<div class="photo-empty">아직 사진이 없어요.<br>📸 촬영으로 오늘 방을 기록해봐요!</div>';return;}
+    if(photos.length===0){photoGrid.innerHTML='<div class="photo-empty">아직 사진이 없어요.<br>📸 고르기로 오늘 방을 기록해봐요!</div>';return;}
     photos.forEach(photo=>{
         const wrap=document.createElement('div');wrap.className='photo-thumb-wrap';
         const img=document.createElement('img');img.src=photo.dataUrl;img.alt='방 사진';img.loading='lazy';
